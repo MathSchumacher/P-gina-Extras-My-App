@@ -154,7 +154,7 @@ const HomePage = () => {
   };
 
   return (
-    <GoogleOAuthProvider clientId="864492743338-odah9sc6nrhuccb0t2p15jeadrok1d7m.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="864492743338-cu432l6cri70f28h61gnb0adcl9mr01k.apps.googleusercontent.com">
       <div className="homepage-container">
         <header className="header">
           {!isLoggedIn ? (
