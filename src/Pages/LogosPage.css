@@ -1,0 +1,61 @@
+/* src/Pages/LogosPage.css */
+.LogosPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0 20px; /* Adiciona um pouco de espaço nas laterais */
+}
+
+.LogosPage h1 {
+    font-size: 2rem;
+    color: var(--text-color); /* Usar a variável de cor do tema */
+    margin-bottom: 20px;
+}
+
+/* Ajusta o tamanho do carrossel */
+.carousel {
+    width: 100%;
+    max-width: 1000px; /* Ajusta o tamanho máximo do carrossel */
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+/* Ajusta o tamanho das imagens dentro do carrossel */
+.carousel-item img {
+    width: 100%; /* Ajusta para 100% para que a imagem ocupe toda a largura do carrossel */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Garante que a imagem se ajuste ao contêiner sem distorção */
+}
+
+/* Opcional: Estilo para os controles de navegação */
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(100%); /* Torna os controles brancos (útil para contraste em fundos escuros) */
+}
+
+/* Opcional: Estilo para os indicadores (pontos de navegação) */
+.carousel-indicators li {
+    background-color: #007bff; /* Cor dos pontos (ajuste conforme necessário) */
+}
+
+/* Estilos adicionais para o botão */
+.LogosPage button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.LogosPage button:hover {
+    background-color: #0056b3;
+}

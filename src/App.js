@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HomePage from './Pages/HomePage';
+import LooksPage from './Pages/Looks-page';
+import PortfolioPage from './Pages/PortfolioPage';
+import DragAndDropPage from './Pages/Drag&DropPage';
+import RegisterPage from './Pages/RegisterPage';
+import LogosPage from './Pages/LogosPage';
+import { ThemeProvider } from './context/ThemeContext';
+import ThemeSwitcher from './components/ThemeSwitcher';
+import { AuthProvider } from './components/StorageLoginData'; // Importando AuthProvider
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <AuthProvider> {/* Envolva com AuthProvider */}
+        <div className="App">
+          <ThemeSwitcher />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/looks" element={<LooksPage />} />
+            <Route path="/Port" element={<PortfolioPage />} />
+            <Route path="/logos" element={<LogosPage />} />
+            <Route path="/drag" element={<DragAndDropPage />} />
+            <Route path="/regis" element={<RegisterPage />} />
+          </Routes>
+        </div>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 

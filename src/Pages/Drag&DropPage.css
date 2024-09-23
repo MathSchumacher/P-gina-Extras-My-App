@@ -1,0 +1,86 @@
+/* src/Pages/DragAndDropPage.css */
+.DragAndDropPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0 20px; /* Adiciona um pouco de espaço nas laterais */
+  }
+  
+  .DragAndDropPage h1 {
+    font-size: 2rem;
+    color: var(--text-color); /* Usar a variável de cor do tema */
+    margin-bottom: 20px;
+  }
+  
+  .draggable {
+    padding: 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: move;
+    margin-bottom: 20px; /* Espaço inferior entre o item arrastável e a área de drop */
+  }
+  
+  .dropzone {
+    width: 100%;
+    max-width: 600px; /* Ajuste o tamanho máximo da área de drop */
+    height: 200px;
+    border: 2px dashed #007bff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #007bff;
+    background-color: var(--background-color); /* Mantém o fundo consistente com o tema */
+    position: relative;
+  }
+  
+  /* Estilo para a imagem largada */
+  .dropped-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Estilo para o texto largado */
+  .dropped-text {
+    white-space: pre-wrap; /* Mantém a formatação do texto */
+    color: var(--text-color); /* Usa a variável de cor do tema */
+    background-color: var(--text-background-color); /* Cor de fundo ajustável */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--text-border-color); /* Cor da borda ajustável */
+    text-align: justify; /* Justifica o texto */
+    max-width: 100%; /* Garante que o texto não ultrapasse o contêiner */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+  }
+  /* Estilo para mensagens de erro */
+  .error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Opcional: Estilo para o botão */
+  .DragAndDropPage button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Adiciona um pouco de espaço acima do botão */
+  }
+  
+  .DragAndDropPage button:hover {
+    background-color: #0056b3;
+  }
+  

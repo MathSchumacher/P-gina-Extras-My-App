@@ -1,0 +1,47 @@
+/* src/components/ThemeSwitcher.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+/* Estilos padrão para o botão */
+.theme-switcher {
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  /* Estilos para o modo claro */
+  .theme-switcher.light {
+    background-color: #ffee00b7; /* Cor de fundo clara */
+    color: #000; /* Cor do texto escura */
+    border: 1px solid #cccccc67; /* Borda clara */
+  }
+  
+  .theme-switcher.light:hover {
+    background-color: #b4a906c9; /* Cor de fundo ao passar o mouse */
+    color: #000; /* Cor do texto ao passar o mouse */
+    border-color: #cccccc67; /* Cor da borda ao passar o mouse */
+  }
+  
+  /* Estilos para o modo escuro */
+  .theme-switcher.dark {
+    background-color: #000000; /* Cor de fundo escura */
+    color: #fffb00; /* Cor do texto clara */
+    border: 1px solid #807f7f; /* Borda escura */
+  }
+  
+  .theme-switcher.dark:hover {
+    background-color: #444; /* Cor de fundo ao passar o mouse */
+    color: #fffb00; /* Cor do texto ao passar o mouse */
+    border-color: #555; /* Cor da borda ao passar o mouse */
+  }
+  
+  /* Fonte padrão para o projeto */
+  :root {
+    --font-family: 'Roboto', sans-serif;
+  }
+  

@@ -1,0 +1,250 @@
+/* Estilos gerais da página */
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Estilo do cabeçalho */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo do menu suspenso */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--background-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: var(--text-color); /* Cor do texto baseada no tema */
+  border: 2px solid rgb(167, 0, 0); /* Define uma borda de cor dinâmica */
+  border-radius: 20%; /* Arredondamento completo para fazer um círculo */
+  padding: 12px 16px; /* Espaçamento interno */
+  text-decoration: none; /* Remove a sublinha de links */
+  display: block; /* Exibição em bloco */
+}
+
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Caixa de informações de localização */
+.location-info {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid var(--info-border-color); /* Cor da borda com base no tema */
+  background-color: var(--location-background-color); /* Fundo dinâmico com base no tema */
+  color: var(--location-text-color); /* Cor do texto dinâmico com base no tema */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.location-info p {
+  margin: 0;
+}
+
+.error-message {
+  color: red;
+  font-size: 1rem;
+}
+
+/* Estilos para as caixas de animação e imagem estática */
+.animated-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilo específico para a animação "above" */
+.animation-box.above {
+  position: fixed;
+  bottom: 70px; /* Ajuste a altura para posicionar logo acima da location-info */
+  right: 65px; /* Alinha à direita, como a location-info */
+  width: 200px;  /* Ajuste o tamanho da caixa */
+  height: 200px; /* Ajuste o tamanho da caixa */
+  border: 2px solid black; /* Borda preta */
+  background-color: white; /* Fundo branco para destacar a imagem/animação */
+  padding: 10px; /* Espaçamento interno para evitar corte da imagem */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.staticimg2 {
+  margin-top: 15px;
+  width: 87px;
+  height: auto;
+  object-fit: contain; /* Ajusta a imagem para caber dentro da caixa sem cortar */
+}
+
+/* Estilo específico para a animação "left" */
+.animation-box.left {
+  position: absolute; /* Use absolute para permitir rolagem da página */
+  bottom: -18vw; /* Ajuste a distância do fundo da página */
+  left:-97vh; /* Ajuste a distância da lateral esquerda da página */
+  width: 150px; /* Ajuste o tamanho conforme necessário */
+  height: 150px; /* Ajuste o tamanho conforme necessário */
+  border: 2px solid black; /* Borda preta */
+  cursor: pointer;
+  background-color: white; /* Fundo branco para destacar a imagem/animação */
+  padding: 10px; /* Espaçamento interno para evitar corte da imagem */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Garante que a caixa fique acima de outros conteúdos */
+}
+
+/* Estilo para a imagem estática 1 */
+.staticimg1 {
+  width: 79px; /* Ajuste conforme necessário */
+  height: auto;
+  margin-top: 20px;
+  margin-left: 3px;
+  cursor: pointer; /* Adiciona um cursor de ponteiro para indicar que é clicável */
+} 
+/* Estilo para a caixa de texto com a mensagem */
+.download-info {
+  position: absolute; /* Posicionamento absoluto dentro do contêiner pai */
+  top: 10px; /* Distância do topo do contêiner pai (ajuste conforme necessário) */
+  left: 50%; /* Centraliza horizontalmente no contêiner pai */
+  transform: translate(-930%, 210%); /* Ajusta para o centro exato */
+  background-color: var(--info-background-color); /* Cor de fundo com base no tema */
+  color: var(--info-text-color); /* Cor do texto com base no tema */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  border: 1px solid var(--info-border-color); /* Cor da borda com base no tema */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra da caixa */
+  font-size: 12px; /* Tamanho da fonte */
+  text-align: justify; /* Alinha o texto ao centro */
+  z-index: 10; /* Garantir que a caixa fique acima dos outros elementos */
+}
+.Registerbutton{
+  padding: 10px 20px;
+  font-size: 1rem;
+  position: absolute;
+  color: var(--info-text-color);
+  left: 180vh;
+  bottom: 48vw;
+  background-color: #c302f3;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+/* Estilos do menu de login */
+.login-menu {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: -4px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.login-menu form {
+  display: flex;
+  flex-direction: column;
+  position: static;
+  top: -0.5vw;
+  left: -38vh;
+  width: 250px;
+  background-color: var(--info-background-color-opposite); 
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-menu label {
+  margin-bottom: 10px;
+  color: var(--info-text-color-opposite);
+}
+
+.login-menu input {
+  padding: 8px;
+  padding-left: 1vh;
+  margin-top: 5px;
+  background-color: var(--info-background-color);
+  color: var(--info-text-color);
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.login-menu button {
+  background-color: #c302f3;
+  color: var(--info-text-color);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-menu button:hover {
+  background-color: #c302f38c;
+}
+.Loginbutton{
+  padding: 10px 20px;
+  font-size: 1rem;
+  position: absolute;
+  color: var(--info-text-color);
+  left: 170vh;
+  bottom: 48vw;
+  background-color: #c302f3;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.Logoutbutton{
+  padding: 10px 20px;
+  font-size: 1rem;
+  position: absolute;
+  color: var(--info-text-color);
+  left: 170vh;
+  bottom: 48vw;
+  background-color: #c302f3;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}

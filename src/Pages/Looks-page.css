@@ -1,0 +1,30 @@
+.LooksPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.LooksPage h1 {
+  font-size: 2rem;
+  color: var(--text-color); /* Use a variável para a cor do texto */
+  margin-bottom: 20px;
+}
+
+.LooksPage button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.LooksPage button:hover {
+  background-color: #0056b3;
+}
